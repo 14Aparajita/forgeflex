@@ -1,0 +1,42 @@
+﻿# Python environments and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Raw datasets: never upload the large HIPE source files
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Ignore generated outputs by default
+outputs/*
+!outputs/hipe/
+!outputs/hipe_walkforward/
+!outputs/sensor_placement_v1/
+!outputs/decision_report_v1/
+
+# Keep only the small artifacts used by the dashboard
+outputs/hipe/*
+!outputs/hipe/hipe_power_10s.csv
+
+outputs/hipe_walkforward/*
+!outputs/hipe_walkforward/hipe_walkforward_metrics.csv
+
+outputs/sensor_placement_v1/*
+!outputs/sensor_placement_v1/sensor_placement_recommendations.csv
+
+outputs/decision_report_v1/*
+!outputs/decision_report_v1/decision_report.json
+
+# Local backup files
+*.bak

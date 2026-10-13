@@ -1,0 +1,481 @@
+{
+  "title": "ForgeFlex integrated decision report",
+  "report_version": 1,
+  "generated_by": "forgeflex.decision_report",
+  "evidence_types": {
+    "hipe": "REAL_PUBLIC_DATASET_DIAGNOSTIC",
+    "activity_audit": "REAL_PUBLIC_DATASET_DIAGNOSTIC",
+    "walkforward": "CHRONOLOGICAL_HELD_OUT_MODEL_EVALUATION",
+    "sensor_placement": "RETROSPECTIVE_VALIDATION_PRIORITIZATION",
+    "scheduling": "SIMULATION_ONLY"
+  },
+  "hipe": {
+    "data_type": "REAL_PUBLIC_DATASET",
+    "dataset": "HIPE one-week archive",
+    "source_directory": "data\\raw\\hipe_week",
+    "frequency": "10s",
+    "alignment": "UTC fixed-width bins; mean P_kW per bin; missing bins remain missing",
+    "rows_after_alignment": 60840,
+    "columns": [
+      "ChipPress",
+      "ChipSaw",
+      "HighTemperatureOven",
+      "MainTerminal",
+      "PickAndPlaceUnit",
+      "ScreenPrinter",
+      "SolderingOven",
+      "VacuumOven",
+      "VacuumPump1",
+      "VacuumPump2",
+      "WashingMachine"
+    ],
+    "missing_fraction_by_series": {
+      "ChipPress": 0.000937,
+      "ChipSaw": 0.000888,
+      "HighTemperatureOven": 0.000953,
+      "MainTerminal": 0.000756,
+      "PickAndPlaceUnit": 0.000247,
+      "ScreenPrinter": 0.000345,
+      "SolderingOven": 0.000641,
+      "VacuumOven": 0.00074,
+      "VacuumPump1": 0.000723,
+      "VacuumPump2": 0.00074,
+      "WashingMachine": 0.000657
+    },
+    "files": [
+      {
+        "file": "ChipPress_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110465,
+        "machine_values": [
+          "ChipPress"
+        ],
+        "valid_timestamps": 110086,
+        "invalid_timestamps": 379,
+        "first_timestamp_utc": "2017-10-22T22:00:01.630000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:57.593000+00:00",
+        "median_positive_interval_seconds": 5.5,
+        "p_kw_min": -0.0,
+        "p_kw_max": -0.0,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "ChipSaw_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110467,
+        "machine_values": [
+          "ChipSaw"
+        ],
+        "valid_timestamps": 110119,
+        "invalid_timestamps": 348,
+        "first_timestamp_utc": "2017-10-22T22:00:00.777000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:56.427000+00:00",
+        "median_positive_interval_seconds": 5.5,
+        "p_kw_min": 0.0,
+        "p_kw_max": 0.8499999940395355,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "HighTemperatureOven_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110466,
+        "machine_values": [
+          "HighTemperatureOven"
+        ],
+        "valid_timestamps": 110093,
+        "invalid_timestamps": 373,
+        "first_timestamp_utc": "2017-10-22T22:00:02.033000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:58.477000+00:00",
+        "median_positive_interval_seconds": 5.497,
+        "p_kw_min": -0.0899999942630529,
+        "p_kw_max": 8.730000376701355,
+        "negative_power_rows": 1789
+      },
+      {
+        "file": "MainTerminal_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110492,
+        "machine_values": [
+          "MainTerminal"
+        ],
+        "valid_timestamps": 110132,
+        "invalid_timestamps": 360,
+        "first_timestamp_utc": "2017-10-22T22:00:03.727000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:57.667000+00:00",
+        "median_positive_interval_seconds": 5.5,
+        "p_kw_min": 4.879999995231628,
+        "p_kw_max": 57.43000030517578,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "PickAndPlaceUnit_PhaseCount_2_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 122773,
+        "machine_values": [
+          "PickAndPlaceUnit"
+        ],
+        "valid_timestamps": 122426,
+        "invalid_timestamps": 347,
+        "first_timestamp_utc": "2017-10-22T22:00:02.733000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:57.043000+00:00",
+        "median_positive_interval_seconds": 4.95,
+        "p_kw_min": -0.0099999997764825,
+        "p_kw_max": 0.4099999964237213,
+        "negative_power_rows": 101700
+      },
+      {
+        "file": "ScreenPrinter_PhaseCount_2_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 122742,
+        "machine_values": [
+          "ScreenPrinter"
+        ],
+        "valid_timestamps": 122313,
+        "invalid_timestamps": 429,
+        "first_timestamp_utc": "2017-10-22T22:00:04.030000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:59.033000+00:00",
+        "median_positive_interval_seconds": 4.95,
+        "p_kw_min": 0.0,
+        "p_kw_max": 0.449999988079071,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "SolderingOven_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110492,
+        "machine_values": [
+          "SolderingOven"
+        ],
+        "valid_timestamps": 110134,
+        "invalid_timestamps": 358,
+        "first_timestamp_utc": "2017-10-22T22:00:02.427000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:57.737000+00:00",
+        "median_positive_interval_seconds": 5.5,
+        "p_kw_min": 0.0,
+        "p_kw_max": 8.160000085830688,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "VacuumOven_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110465,
+        "machine_values": [
+          "VacuumOven"
+        ],
+        "valid_timestamps": 110104,
+        "invalid_timestamps": 361,
+        "first_timestamp_utc": "2017-10-22T22:00:01.337000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:57.510000+00:00",
+        "median_positive_interval_seconds": 5.5,
+        "p_kw_min": 0.0,
+        "p_kw_max": 0.0199999995529651,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "VacuumPump1_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110492,
+        "machine_values": [
+          "VacuumPump1"
+        ],
+        "valid_timestamps": 110098,
+        "invalid_timestamps": 394,
+        "first_timestamp_utc": "2017-10-22T22:00:04.647000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:57.813000+00:00",
+        "median_positive_interval_seconds": 5.497,
+        "p_kw_min": -0.0,
+        "p_kw_max": 1.0800000429153442,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "VacuumPump2_PhaseCount_2_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110496,
+        "machine_values": [
+          "VacuumPump2"
+        ],
+        "valid_timestamps": 110128,
+        "invalid_timestamps": 368,
+        "first_timestamp_utc": "2017-10-22T22:00:01.803000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:55.097000+00:00",
+        "median_positive_interval_seconds": 5.5,
+        "p_kw_min": -0.0,
+        "p_kw_max": 0.8899999856948853,
+        "negative_power_rows": 0
+      },
+      {
+        "file": "WashingMachine_PhaseCount_3_geq_2017-10-23_lt_2017-10-30.csv",
+        "rows": 110495,
+        "machine_values": [
+          "WashingMachine"
+        ],
+        "valid_timestamps": 110138,
+        "invalid_timestamps": 357,
+        "first_timestamp_utc": "2017-10-22T22:00:03.837000+00:00",
+        "last_timestamp_utc": "2017-10-29T22:59:55.757000+00:00",
+        "median_positive_interval_seconds": 5.497,
+        "p_kw_min": 0.0,
+        "p_kw_max": 0.0099999997764825,
+        "negative_power_rows": 0
+      }
+    ],
+    "warnings": [
+      "This is a public industrial dataset, not a measurement of the user's own factory.",
+      "No missing values were interpolated or forward-filled.",
+      "Negative P_kW values were preserved for audit; inspect sensor offsets before any clipping.",
+      "Aligned bins average asynchronous measurements and should not be described as exact simultaneous readings.",
+      "No savings, energy-reduction, or scheduling improvement is calculated by this command."
+    ],
+    "aligned_csv": "outputs\\hipe\\hipe_power_10s.csv"
+  },
+  "activity_audit": {
+    "data_type": "REAL_PUBLIC_DATASET_DIAGNOSTIC",
+    "dataset": "HIPE one-week archive",
+    "epsilon_kw": 0.05,
+    "epsilon_note": "Heuristic threshold using absolute power; not an official machine-state label.",
+    "raw_files_found": 11,
+    "raw_files_with_valid_rows": 11,
+    "raw_file_audit_csv": "outputs\\hipe_activity_audit\\hipe_raw_file_audit.csv",
+    "raw_daily_activity_csv": "outputs\\hipe_activity_audit\\hipe_raw_daily_activity.csv",
+    "aligned_daily_activity_csv": "outputs\\hipe_activity_audit\\hipe_aligned_daily_activity.csv",
+    "raw_vs_aligned_daily_csv": "outputs\\hipe_activity_audit\\hipe_raw_vs_aligned_daily.csv",
+    "raw_heatmap_png": "outputs\\hipe_activity_audit\\hipe_raw_activity_heatmap.png",
+    "aligned_heatmap_png": "outputs\\hipe_activity_audit\\hipe_aligned_activity_heatmap.png",
+    "aligned_rows_after_invalid_timestamps_removed": 60840,
+    "aligned_invalid_timestamp_rows": 0,
+    "aligned_series": [
+      "ChipPress",
+      "ChipSaw",
+      "HighTemperatureOven",
+      "MainTerminal",
+      "PickAndPlaceUnit",
+      "ScreenPrinter",
+      "SolderingOven",
+      "VacuumOven",
+      "VacuumPump1",
+      "VacuumPump2",
+      "WashingMachine"
+    ],
+    "warnings": [
+      "Audit only; no source data was modified.",
+      "Daily grouping uses UTC dates to match the current alignment pipeline.",
+      "Raw and aligned activity fractions may differ because binning, missing bins, and timestamps differ.",
+      "Activity threshold is heuristic and must not be presented as official machine ON/OFF ground truth.",
+      "A temporal split must not be selected only to improve model scores."
+    ]
+  },
+  "walkforward": {
+    "status": "available",
+    "evaluated_metric_rows": 210,
+    "by_model": [
+      {
+        "model": "ridge",
+        "evaluated_rows": 70,
+        "weighted_mae_kw": 0.08462700343513295,
+        "active_only_mae_kw_weighted_by_active_samples": 0.4503937935733571
+      },
+      {
+        "model": "train_mean_baseline",
+        "evaluated_rows": 70,
+        "weighted_mae_kw": 0.12172389759516593,
+        "active_only_mae_kw_weighted_by_active_samples": 0.6449352454486056
+      },
+      {
+        "model": "zero_baseline",
+        "evaluated_rows": 70,
+        "weighted_mae_kw": 0.05604344638495283,
+        "active_only_mae_kw_weighted_by_active_samples": 0.7603156396675459
+      }
+    ],
+    "interpretation": "Weighted summary of saved chronological test-fold metrics; not a guarantee of deployment performance."
+  },
+  "sensor_placement": {
+    "data_type": "RETROSPECTIVE_VALIDATION_PRIORITIZATION",
+    "input_metrics_csv": "outputs\\hipe_walkforward\\hipe_walkforward_metrics.csv",
+    "method": "Heuristic ranking from out-of-sample chronological Ridge validation metrics; prioritizes high active-only error, frequent activity, and Ridge underperformance relative to naive baselines.",
+    "score_definition": {
+      "active_only_mae_percentile_weight": 0.5,
+      "active_fraction_percentile_weight": 0.3,
+      "ridge_excess_error_vs_best_naive_percentile_weight": 0.2,
+      "scale": "0 to 100; relative percentile score among eligible machines only",
+      "note": "A ranking heuristic, not a calibrated probability, ROI, or physical sensor-value estimate."
+    },
+    "eligibility": {
+      "minimum_active_test_samples_across_folds": 100,
+      "minimum_folds_with_active_test_samples": 2
+    },
+    "budget_slots": 3,
+    "machines_seen": 10,
+    "eligible_machines": 6,
+    "selected_for_submeter_validation": [
+      "SolderingOven",
+      "VacuumPump2",
+      "VacuumPump1"
+    ],
+    "recommendations_csv": "outputs\\sensor_placement_v1\\sensor_placement_recommendations.csv",
+    "interpretation_notes": [
+      "Recommendations mean validate a candidate submeter, not automatically install one.",
+      "Metrics come from chronological held-out evaluation; active-only errors condition on reference target activity.",
+      "The percentile score is relative to eligible machines in this dataset and changes if the candidate set changes.",
+      "This version does not include installation costs, electrical feasibility, machine criticality, or independently verified energy share.",
+      "No energy savings, ROI, payback period, or causal benefit from adding a sensor is estimated.",
+      "HIPE is a public one-week dataset, not the user's factory; results do not establish cross-factory generalization.",
+      "When test windows overlap, counts across folds may count the same timestamps more than once; use the default non-overlapping test/step fractions for straightforward interpretation."
+    ],
+    "candidate_rows": [
+      {
+        "machine": "SolderingOven",
+        "eligible_for_ranking": true,
+        "priority_score_0_to_100": 80.0,
+        "recommendation_rank": 1,
+        "recommendation_status": "recommend_validate_submeter_candidate",
+        "active_test_samples_across_folds": 5285
+      },
+      {
+        "machine": "VacuumPump2",
+        "eligible_for_ranking": true,
+        "priority_score_0_to_100": 70.0,
+        "recommendation_rank": 2,
+        "recommendation_status": "recommend_validate_submeter_candidate",
+        "active_test_samples_across_folds": 5272
+      },
+      {
+        "machine": "VacuumPump1",
+        "eligible_for_ranking": true,
+        "priority_score_0_to_100": 66.6667,
+        "recommendation_rank": 3,
+        "recommendation_status": "recommend_validate_submeter_candidate",
+        "active_test_samples_across_folds": 8819
+      },
+      {
+        "machine": "ScreenPrinter",
+        "eligible_for_ranking": true,
+        "priority_score_0_to_100": 50.0,
+        "recommendation_rank": 4,
+        "recommendation_status": "ranked_candidate_outside_budget",
+        "active_test_samples_across_folds": 1825
+      },
+      {
+        "machine": "ChipSaw",
+        "eligible_for_ranking": true,
+        "priority_score_0_to_100": 43.3333,
+        "recommendation_rank": 5,
+        "recommendation_status": "ranked_candidate_outside_budget",
+        "active_test_samples_across_folds": 3089
+      },
+      {
+        "machine": "PickAndPlaceUnit",
+        "eligible_for_ranking": true,
+        "priority_score_0_to_100": 40.0,
+        "recommendation_rank": 6,
+        "recommendation_status": "ranked_candidate_outside_budget",
+        "active_test_samples_across_folds": 5448
+      },
+      {
+        "machine": "ChipPress",
+        "eligible_for_ranking": false,
+        "priority_score_0_to_100": null,
+        "recommendation_rank": null,
+        "recommendation_status": "insufficient_validation_evidence",
+        "active_test_samples_across_folds": 0
+      },
+      {
+        "machine": "HighTemperatureOven",
+        "eligible_for_ranking": false,
+        "priority_score_0_to_100": null,
+        "recommendation_rank": null,
+        "recommendation_status": "insufficient_validation_evidence",
+        "active_test_samples_across_folds": 697
+      },
+      {
+        "machine": "VacuumOven",
+        "eligible_for_ranking": false,
+        "priority_score_0_to_100": null,
+        "recommendation_rank": null,
+        "recommendation_status": "insufficient_validation_evidence",
+        "active_test_samples_across_folds": 0
+      },
+      {
+        "machine": "WashingMachine",
+        "eligible_for_ranking": false,
+        "priority_score_0_to_100": null,
+        "recommendation_rank": null,
+        "recommendation_status": "insufficient_validation_evidence",
+        "active_test_samples_across_folds": 0
+      }
+    ]
+  },
+  "scheduling": {
+    "data_type": "SIMULATION_ONLY",
+    "title": "ForgeFlex tariff-aware production scheduling comparison",
+    "jobs_input_source": "SYNTHETIC_DEMO_INPUT",
+    "tariff_input_source": "SYNTHETIC_ILLUSTRATIVE_TARIFF",
+    "tariff_currency": "unspecified currency units per kWh",
+    "baseline_method": "Per-machine earliest-due-date ordering; schedule each job at the earliest available contiguous slot at or after release, respecting its deadline when feasible.",
+    "optimized_method": "Uses the same per-machine earliest-due-date ordering as the baseline; for each job, choose the lowest-tariff contiguous slot window that respects its release and deadline when feasible, with earliest-start tie-break. If no deadline-feasible window exists, use the cheapest available window and report the deadline miss.",
+    "objective": "Minimize simulated tariff-weighted electricity cost subject to fixed job-to-machine assignments, non-overlap per machine, release times, and deadlines where feasible.",
+    "assumptions": [
+      "Job durations, machine assignments, power, release times, deadlines, and quantities are supplied or synthetically generated scenario inputs.",
+      "Power is constant for each job throughout its scheduled duration.",
+      "Jobs are non-preemptive and each machine runs at most one job at a time.",
+      "Jobs on different machines may run concurrently; aggregate demand is the sum of their scheduled power.",
+      "The default tariff is an illustrative synthetic time-of-use profile, not an actual utility tariff.",
+      "No setup times, precedence constraints, labor constraints, machine failures, demand charges, or production-quality effects are modeled.",
+      "No HIPE machine power measurements are used as job durations, production orders, or tariff data."
+    ],
+    "limitations": [
+      "The cost-aware method is a deterministic greedy heuristic, not a globally optimal mixed-integer schedule.",
+      "This simulation does not establish real-factory energy savings, cost savings, feasibility, or ROI.",
+      "A lower simulated bill does not necessarily imply lower energy consumption."
+    ],
+    "parameters": {
+      "seed": 42,
+      "job_count_requested": 20,
+      "horizon_slots": 24,
+      "slot_hours": 1.0
+    },
+    "baseline": {
+      "jobs_requested": 20,
+      "jobs_scheduled": 20,
+      "jobs_unscheduled": 0,
+      "deadline_misses_among_scheduled_jobs": 0,
+      "deadline_met_fraction_of_scheduled_jobs": 1.0,
+      "total_energy_kwh": 153.18,
+      "total_energy_cost": 1631.37,
+      "peak_aggregate_demand_kw": 19.14,
+      "total_production_units_scheduled": 1092.0,
+      "horizon_slots": 24,
+      "slot_hours": 1.0
+    },
+    "optimized": {
+      "jobs_requested": 20,
+      "jobs_scheduled": 20,
+      "jobs_unscheduled": 0,
+      "deadline_misses_among_scheduled_jobs": 0,
+      "deadline_met_fraction_of_scheduled_jobs": 1.0,
+      "total_energy_kwh": 153.18,
+      "total_energy_cost": 1566.4099999999999,
+      "peak_aggregate_demand_kw": 18.8,
+      "total_production_units_scheduled": 1092.0,
+      "horizon_slots": 24,
+      "slot_hours": 1.0
+    },
+    "delta_optimized_minus_baseline": {
+      "energy_kwh": 0.0,
+      "energy_cost": -64.96000000000004,
+      "peak_aggregate_demand_kw": -0.33999999999999986,
+      "deadline_misses": 0.0
+    },
+    "percent_change_optimized_vs_baseline": {
+      "energy_kwh": 0.0,
+      "energy_cost": -3.981929298687609,
+      "peak_aggregate_demand_kw": -1.7763845350052239
+    },
+    "outputs": {
+      "jobs_csv": "outputs\\scheduling_demo_v1\\scenario_jobs.csv",
+      "tariff_csv": "outputs\\scheduling_demo_v1\\scenario_tariff.csv",
+      "baseline_schedule_csv": "outputs\\scheduling_demo_v1\\schedule_baseline.csv",
+      "optimized_schedule_csv": "outputs\\scheduling_demo_v1\\schedule_optimized.csv",
+      "slot_profiles_csv": "outputs\\scheduling_demo_v1\\schedule_slot_profiles.csv"
+    }
+  },
+  "missing_or_unreadable_inputs": [],
+  "interpretation_guardrails": [
+    "HIPE is a public one-week dataset, not a measurement of the user's factory.",
+    "The activity threshold is a heuristic and is not official machine-state ground truth.",
+    "Sensor-placement scores rank candidates for submeter validation; they do not estimate ROI, payback, or causal sensor value.",
+    "Scheduling outputs are simulations. Synthetic job/tariff results must not be reported as measured factory savings.",
+    "A lower simulated tariff bill is not equivalent to lower energy consumption.",
+    "The current modules are consolidated in this report but are not yet coupled into one optimization objective."
+  ]
+}
